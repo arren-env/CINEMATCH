@@ -1,6 +1,7 @@
-import React from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const NavBar = () => {
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <>
       <div className="navbar bg-base-100">
@@ -57,7 +58,10 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <label className="swap swap-rotate hover:bg-stone-950 hover:text-white">
+              <label
+                className="swap swap-rotate hover:bg-stone-950 hover:text-white"
+                onClick={() => setDarkMode(!darkMode)}
+              >
                 <input type="checkbox" />
 
                 <svg
