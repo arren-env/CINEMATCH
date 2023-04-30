@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="mt-4 mx-5">
-      <footer className="footer items-center py-4 bg-white text-black">
-        <div className="items-center grid-flow-col">
+      <footer className="footer items-center py-4 bg-white text-black dark:text-white dark:bg-black">
+        <div className="items-center grid-flow-col ">
           <svg
             width="36"
             height="36"
@@ -18,7 +18,7 @@ const Footer = () => {
           </svg>
           <p>Copyright © 2023 - All right reserved</p>
         </div>
-        <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        <div className="justify-self-center grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"

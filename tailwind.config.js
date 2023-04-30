@@ -5,7 +5,7 @@ export default {
   ],
   plugins: [require("daisyui")],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'class',//'media', or
   theme: {
     accentColor: ({ theme }) => ({
       ...theme('colors'),

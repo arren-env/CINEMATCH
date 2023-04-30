@@ -1,10 +1,20 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const NavBar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else document.documentElement.classList.remove("dark");
+  }, [theme]);
+
+  const changeTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 dark:bg-black ">
         <div className="flex-1">
           <Link to="/">
             <img
@@ -19,7 +29,7 @@ const NavBar = () => {
             <li>
               <Link
                 to="/"
-                className="font-semibold text-[#1b213b] hover:bg-stone-950 hover:text-white"
+                className="font-semibold text-[#1b213b] hover:bg-stone-950 hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black"
               >
                 Home
               </Link>
@@ -27,7 +37,7 @@ const NavBar = () => {
             <li tabindex="0">
               <Link
                 to="/category"
-                className="hover:bg-stone-950 hover:text-white"
+                className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white"
               >
                 Genre
                 <svg
@@ -40,29 +50,53 @@ const NavBar = () => {
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </Link>
-              <ul className="p-2 bg-base-100 absolute z-[1000]">
+              <ul className="p-2 bg-base-100 dark:bg-black absolute z-[1000]">
                 <li>
-                  <a className="hover:bg-stone-950 hover:text-white">Action</a>
+                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black">
+                    Action
+                  </a>
                 </li>
                 <li>
-                  <a className="hover:bg-stone-950 hover:text-white">Rom-Com</a>
+                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
+                    Rom-Com
+                  </a>
                 </li>
                 <li>
-                  <a className="hover:bg-stone-950 hover:text-white">Horror</a>
+                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
+                    Horror
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li tabIndex="0">
+              <div className="hover:bg-black">
+                <img
+                  src="/src/assets/profile.png"
+                  className="h-7 md:h-9 rounded-full hover:bg-black"
+                  alt=""
+                />
+              </div>
+              <ul className="p-2 bg-base-100 dark:bg-black absolute z-[1000] -ml-12">
+                <li>
+                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black">
+                    Profile
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
+                    Settings
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
+                    Logout
+                  </a>
                 </li>
               </ul>
             </li>
             <li>
-              <Link to="/about" className="hover:bg-stone-950 hover:text-white">
-                About
-              </Link>
-            </li>
-            <li>
-              <label
-                className="swap swap-rotate hover:bg-stone-950 hover:text-white"
-                onClick={() => setDarkMode(!darkMode)}
-              >
-                <input type="checkbox" />
+              <label className="swap swap-rotate hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black">
+                <input type="checkbox" onClick={changeTheme} />
 
                 <svg
                   className="swap-on fill-current w-5 h-5"
