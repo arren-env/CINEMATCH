@@ -1,5 +1,6 @@
 import ActionMovies from "./ActionMovies";
 import NewMovies from "./NewMovies";
+import RomComMovies from "./RomComMovies";
 import SlideShow from "./SlideShow";
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <SlideShow />
       <NewMovies />
       <ActionMovies />
+      <RomComMovies/>
     </div>
   );
 };

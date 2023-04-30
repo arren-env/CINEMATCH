@@ -1,40 +1,45 @@
 import React from "react";
-import MovieCard from "../Styles/MovieCard";
+import MovieCard from "../Pages/MovieCard";
+import {Link} from 'react-router-dom'
 const ActionMovies = () => {
   return (
     <>
       <div className="flex justify-between mx-5 text-lg dark:text-white">
         <div>Best Action Movies</div>
         <div>
-          <a href="">See more...</a>
+          <Link to="/FullRomComPage">See more...</Link>
         </div>
       </div>
       <div className="flex carousel carousel-end rounded gap-5 mt-2 mx-5 dark:text-white">
-        <MovieCard rent="Rent" img="/src/assets/11.jpg" title="Ponyo" />
         <MovieCard
           rent="Rent"
-          img="/src/assets/12.jpg"
+          img="/src/assets/Studio Ghibli/ponyo.jpg"
+          title="Ponyo"
+        />
+        <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/Howl's Moving Castle.jpg"
           title="Howl's Moving Castle"
         />
         <MovieCard
           rent="Rent"
-          img="/src/assets/13.jpg"
+          img="/src/assets/Studio Ghibli/Only Yesterday.jpg"
+          title="Only Yesterday"
+        />
+        <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/The Wind Rises.jpg"
+          title="The Wind Rises"
+        />
+         <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/My Neighbors the Yamadas.jpg"
           title="My Neighbors the Yamadas"
         />
         <MovieCard
           rent="Rent"
-          img="/src/assets/14.jpg"
+          img="/src/assets/Studio Ghibli/Nausicaä of the Valley of the Wind.jpg"
           title="Nausicaä of the Valley of the Wind"
-        />
-        <MovieCard
-          rent="Rent"
-          img="/src/assets/15.jpg"
-          title=" Only Yesterday"
-        />
-        <MovieCard
-          rent="Rent"
-          img="/src/assets/16.jpg"
-          title=" The Wind Rises"
         />
       </div>
     </>

@@ -52,19 +52,19 @@ const NavBar = () => {
               </Link>
               <ul className="p-2 bg-base-100 dark:bg-black absolute z-[1000]">
                 <li>
-                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black">
+                  <Link to="/FullRomComPage" className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black">
                     Action
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
+                  <Link to="/FullRomComPage" className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
                     Rom-Com
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
+                  <Link to="/FullRomComPage" className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
                     Horror
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>

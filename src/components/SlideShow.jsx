@@ -1,5 +1,5 @@
 import React from "react";
-import SlideCard from "../Styles/SlideCard";
+import SlideCard from "../Pages/SlideCard";
 
 const SlideShow = () => {
   return (

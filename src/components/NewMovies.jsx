@@ -1,21 +1,46 @@
 import React from "react";
-import MovieCard from "../Styles/MovieCard";
+import MovieCard from "../Pages/MovieCard";
+import { Link } from "react-router-dom";
 const NewMovies = () => {
   return (
     <>
       <div className="flex justify-between mx-5 text-lg dark:text-white">
         <div>New release movies</div>
         <div>
-          <a href="">See more...</a>
+          <Link to="FullRomComPage">See more...</Link>
         </div>
       </div>
       <div className="flex carousel carousel-end rounded gap-5 mt-2 mx-5 dark:text-white">
-        <MovieCard rent="Rent" img="/src/assets/5.jpg"  title=" Tales From Earthsea"/>
-        <MovieCard rent="Rent" img="/src/assets/6.jpg"  title="Ocean Waves"/>
-        <MovieCard rent="Rent" img="/src/assets/7.jpg"  title="The Secret World of Arrietty"/>
-        <MovieCard rent="Rent" img="/src/assets/8.jpg"  title="From Up on Poppy Hill"/>
-        <MovieCard rent="Rent" img="/src/assets/9.jpg"  title="The Cat Returns"/>
-        <MovieCard rent="Rent" img="/src/assets/10.jpg" title=" When Marnie Was There"/>
+        <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/From Up on Poppy Hill.jpg"
+          title="From Up on Poppy Hill"
+        />
+        <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/Ocean Waves.jpg"
+          title="Ocean Waves"
+        />
+        <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/The Secret World of Arrietty.jpg"
+          title="The Secret World of Arrietty"
+        />
+        <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/Tales From Earthsea.jpg"
+          title=" Tales From Earthsea"
+        />
+        <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/The Cat Returns.jpg"
+          title="The Cat Returns"
+        />
+        <MovieCard
+          rent="Rent"
+          img="/src/assets/Studio Ghibli/When Marnie Was There.jpg"
+          title=" When Marnie Was There"
+        />
       </div>
     </>
   );
