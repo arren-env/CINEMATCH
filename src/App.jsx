@@ -4,7 +4,9 @@ import NavBar from "./components/NavBar";
 import Category from "./components/Category";
 import Footer from "./components/Footer";
 import SingleMoviePage from "./Pages/SingleMoviePage";
-import FullRomComPage from '../src/components/FullRomComPage'
+import FullRomComPage from "../src/components/FullRomComPage";
+import Registration from "./components/Registration";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -12,6 +14,12 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Switch>
+          <Route path="/registration">
+            <Registration />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/" exact>
             <Home />
           </Route>

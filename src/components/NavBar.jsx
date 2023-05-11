@@ -4,6 +4,14 @@ const NavBar = () => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else document.documentElement.classList.remove("dark");
@@ -52,17 +60,26 @@ const NavBar = () => {
               </Link>
               <ul className="p-2 bg-base-100 dark:bg-black absolute z-[1000]">
                 <li>
-                  <Link to="/FullRomComPage" className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black">
+                  <Link
+                    to="/FullRomComPage"
+                    className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black"
+                  >
                     Action
                   </Link>
                 </li>
                 <li>
-                  <Link to="/FullRomComPage" className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
+                  <Link
+                    to="/FullRomComPage"
+                    className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black "
+                  >
                     Rom-Com
                   </Link>
                 </li>
                 <li>
-                  <Link to="/FullRomComPage" className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black ">
+                  <Link
+                    to="/FullRomComPage"
+                    className="hover:bg-stone-950 hover:text-white dark:hover:text-black dark:hover:bg-white dark:text-white dark:bg-black "
+                  >
                     Horror
                   </Link>
                 </li>

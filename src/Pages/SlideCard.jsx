@@ -1,9 +1,10 @@
+
 import React from "react";
 
 const SlideCard = ({ img, title, slideId, ref1, ref2 }) => {
   return (
     <>
-      <div id={slideId} className="carousel-item relative w-full ">
+      <div id={slideId} className="carousel-item relative w-full">
         <div className="w-auto m-2 relative">
           <div className="bg-gradient-to-r from-black rounded-xl w-full h-full absolute " />
           <img src={img} className="object-cover w-full rounded-xl" alt="Img" />
@@ -24,7 +25,7 @@ const SlideCard = ({ img, title, slideId, ref1, ref2 }) => {
         </div>
       </div>
     </>
-  );
+  );``
 };
 
 export default SlideCard;
