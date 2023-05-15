@@ -3,6 +3,8 @@ const CustomErrorHandler = require('../../services/customErrorHandler');
 const User = require('../../models/user');
 const bcrypt = require('bcrypt');
 const JwtService = require('../../services/JwtService');
+const { REFRESH_SECRET } = require('../../config');
+const RefreshToken=require('../../models/refreshToken')
 
 const registerController = {
     async register(req, res, next) {
@@ -45,16 +47,21 @@ const registerController = {
         });
 
         let access_token;
+        let refresh_token;
         try {
             const result = await user.save();
 
             //token
-            access_token = JwtService.sign({ _id: result._id, Role: result.role })
+            access_token = JwtService.sign({ _id: result._id, Role: result.Role });
+            refresh_token = JwtService.sign({ _id: result._id, Role: result.Role }, '1y', REFRESH_SECRET);
+
+            //database whitelist
+            await RefreshToken.create({Token:refresh_token});
         } catch (err) {
             return next(err)
         }
 
-        res.json({ access_token: access_token });
+        res.json({ access_token,refresh_token });
     }
 }
 
