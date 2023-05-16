@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-const FullRomComPage = ({ title, img, rent }) => {
+const FullPageStyle = ({ title, img, rent }) => {
   return (
     <div className="flex-col">
       <div className="bg-gradient-to-br flex mx-5">
@@ -36,10 +36,10 @@ const FullRomComPage = ({ title, img, rent }) => {
               d="M12.673 2.327a.833.833 0 0 0-.59-.244H7.917a.833.833 0 0 0-.834.834v2.916H5V2.917A2.917 2.917 0 0 1 7.917 0h4.166A2.917 2.917 0 0 1 15 2.917v2.916h-2.083V2.917a.833.833 0 0 0-.244-.59ZM12.917 5.833H7.083v3.75a1.042 1.042 0 1 1-2.083 0v-3.75H.833A.833.833 0 0 0 0 6.667v9.166A4.166 4.166 0 0 0 4.167 20h11.666A4.166 4.166 0 0 0 20 15.833V6.667a.833.833 0 0 0-.833-.834H15v3.75a1.041 1.041 0 1 1-2.083 0v-3.75Z"
             ></path>
           </svg>
-          <h1 className="dark:text-white">{rent}</h1>
+          <h1 className="dark:text-white text-black">{rent}</h1>
         </div>
     </div>
   );
 };
 
-export default FullRomComPage;
+export default FullPageStyle;

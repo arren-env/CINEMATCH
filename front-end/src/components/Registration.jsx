@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Registration = () => {
   return (
@@ -78,7 +79,7 @@ const Registration = () => {
                   type="text"
                   id="FirstName"
                   name="first_name"
-                  className=" mt-1 w-full h-8 rounded  border-gray-900 border focus:border-2 text-base text-gray-700 shadow-sm dark:bg-zinc-700 dark:text-white"
+                  className=" mt-1 w-full h-8 rounded bg-white border-gray-900 border focus:border-2 text-base text-gray-700 shadow-sm dark:bg-zinc-700 dark:text-white"
                   placeholder=" First Name"
                 />
               </div>
@@ -127,9 +128,7 @@ const Registration = () => {
                 <label htmlFor="MarketingAccept" className="flex gap-4">
                   <input
                     type="checkbox"
-                    id="MarketingAccept"
-                    name="marketing_accept"
-                    className="h-5 w-5  border-gray-900 bg-white shadow-sm"
+                    className="h-5 w-5 border-gray-900 dark:accent-white accent-black shadow-sm]"
                   />
 
                   <span className="text-sm text-gray-700 dark:text-white">
@@ -166,12 +165,12 @@ const Registration = () => {
 
                 <p className="mt-4 text-sm text-gray-500 dark:text-white sm:mt-0">
                   Already have an account? {"\u00A0"}
-                  <a
-                    href="#"
+                  <Link
+                    to="/login"
                     className="text-gray-700 dark:text-gray-500 underline"
                   >
                     Log in
-                  </a>
+                  </Link>
                   .
                 </p>
               </div>

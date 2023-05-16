@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const SlideCard = ({ img, title, slideId, ref1, ref2 }) => {
@@ -25,7 +24,8 @@ const SlideCard = ({ img, title, slideId, ref1, ref2 }) => {
         </div>
       </div>
     </>
-  );``
+  );
+  ``;
 };
 
 export default SlideCard;

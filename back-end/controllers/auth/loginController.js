@@ -4,7 +4,10 @@ const CustomErrorHandler = require('../../services/customErrorHandler');
 const JwtService = require('../../services/JwtService');
 const bcrypt = require('bcrypt');
 const RefreshToken = require('../../models/refreshToken');
+
 const loginController = {
+
+    //login req
     async login(req, res, next) {
         //validation
         const loginSchema = joi.object({
@@ -24,6 +27,7 @@ const loginController = {
             if (!user) {
                 return next(CustomErrorHandler.wrongCredentials());
             }
+            
             //compare password
             const match = await bcrypt.compare(req.body.Password, user.Password);
             if (!match) {
@@ -43,6 +47,7 @@ const loginController = {
         }
     },
 
+    //logout req
     async logout(req, res, next) {
         //validation
         const refreshSchema = joi.object({
@@ -60,7 +65,7 @@ const loginController = {
         } catch (err) {
             return next(new Error('something went wrong in the database.'))
         }
-        res.json({status:1})
+        res.json({ status: 1 })
     }
 }
 

@@ -7,6 +7,7 @@ const { REFRESH_SECRET } = require('../../config');
 const RefreshToken=require('../../models/refreshToken')
 
 const registerController = {
+
     async register(req, res, next) {
 
         //validation
@@ -35,6 +36,7 @@ const registerController = {
         }
 
         const { FirstName, LastName, Email, Password } = req.body;
+        
         //hash password
         const hashedPassword = await bcrypt.hash(Password, 10);
 

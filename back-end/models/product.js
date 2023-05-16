@@ -25,6 +25,10 @@ const productSchema = new Schema(
       type: String,
       required: true,
     },
+    Duration: {
+      type: String,
+      required: true,
+    },
     MovieImg: {
       type: String,
       required: true,
@@ -47,7 +51,7 @@ const productSchema = new Schema(
       }
     },
   },
-  { timestamps: true, toJSON: { getters: true } ,id:false }
+  { timestamps: true, toJSON: { getters: true }, id: false }
 );
 
 module.exports = mongoose.model("Product", productSchema, "products");

@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom'
 const ActionMovies = () => {
   return (
     <>
-      <div className="flex justify-between mx-5 text-lg dark:text-white">
+      <div className="flex justify-between mx-5 text-lg dark:text-white text-black">
         <div>Best Action Movies</div>
         <div>
           <Link to="/FullRomComPage">See more...</Link>
         </div>
       </div>
-      <div className="flex carousel carousel-end rounded gap-5 mt-2 mx-5 dark:text-white">
+      <div className="flex carousel carousel-end rounded gap-5 mt-2 mx-5 dark:text-white text-black">
         <MovieCard
           rent="Rent"
           img="/src/assets/Studio Ghibli/ponyo.jpg"

@@ -7,10 +7,12 @@ import SingleMoviePage from "./Pages/SingleMoviePage";
 import FullRomComPage from "../src/components/FullRomComPage";
 import Registration from "./components/Registration";
 import Login from "./components/Login";
+import Admin from "./components/Admin";
+import GetStarted from "./components/GetStarted";
 
 function App() {
   return (
-    <>
+    <div className="bg-white dark:bg-black">
       <BrowserRouter>
         <NavBar />
         <Switch>
@@ -32,10 +34,16 @@ function App() {
           <Route path="/FullRomComPage">
             <FullRomComPage />
           </Route>
+          <Route path="/admin">
+            <Admin/>
+          </Route>
+          <Route path="/getStarted">
+            <GetStarted/>
+          </Route>
         </Switch>
         <Footer />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

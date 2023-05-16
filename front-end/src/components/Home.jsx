@@ -4,7 +4,7 @@ import RomComMovies from "./RomComMovies";
 import SlideShow from "./SlideShow";
 const Home = () => {
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-black bg-white">
       <SlideShow />
       <NewMovies />
       <ActionMovies />

@@ -6,6 +6,7 @@ const User = require('../../models/user');
 const Refresh_Token = require('../../models/refreshToken')
 
 const refreshController = {
+
     async refresh(req, res, next) {
         //validation
         const refreshSchema = joi.object({

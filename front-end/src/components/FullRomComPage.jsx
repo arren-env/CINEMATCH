@@ -4,7 +4,7 @@ const FullRomComPage = () => {
   return (
     <div>
       <div>
-        <h1 className="dark:text-white text-black md:text-4xl md:mb-4 mb-2 ml-5 font-bold ">
+        <h1 className="dark:text-white text-black md:text-4xl md:mb-4 mb-2 ml-5 font-bold">
           Feel Good Rom-Com Movies
         </h1>
       </div>
